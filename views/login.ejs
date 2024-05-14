@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://www.iconpacks.net/icons/1/free-cinema-icon-849-thumb.png" type="image/x-icon">
+    <title>Log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body{
+            background: linear-gradient(to bottom right, black, red, white);
+        }
+    </style>
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
+    <div class="card rounded p-3"  style="width: 400px;background-color: black; color:white;">
+        <h1 class="text-center mb-4">Login</h1>
+        <div class="flashes">
+            <% if (flashMessages) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= flashMessages %>
+                </div>
+            <% }%>
+        </div>
+        <form action="/login/login_validacija" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label><br>
+                <input type="text" class="form-control" placeholder="Enter username" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label><br>
+                <input type="password" class="form-control" placeholder="Enter password" id="pwd" name="password">
+            </div><br>
+            <a href="/login/register">Register if you don't have an account!</a><br><br>
+            <button type="submit" class="btn btn-light">Log in</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

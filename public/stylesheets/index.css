@@ -1,0 +1,45 @@
+body{
+    padding:0;margin:0;
+
+}
+body {
+    background-color: black !important;
+}
+
+.card{
+    margin: 10px;
+}
+
+#icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+body{padding:0;margin:0;}
+#icon{
+    width: 40px;
+    height: auto;
+    margin-right: 20%;
+}
+.navigacija{
+    margin:0;
+    padding: 0;
+}
+#navi{
+    padding:10px;
+}
+
+@media (max-width: 1000px) {
+    .col-1,
+    .col-4,
+    .col {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .row {
+        margin-left: 0 !important;
+    }
+}
